@@ -1,0 +1,237 @@
+/* Navigation Bar */
+nav {
+    width: 100%;
+    background: linear-gradient(135deg, #ff4b2b, #ff416c); /* Gradient background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Logo */
+.n-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between logo and search bar */
+}
+
+.n-logo h1 {
+    font-size: 28px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin: 0; /* Remove default margin */
+}
+
+.n-logo span {
+    color: #ffde59; /* Bright color for contrast */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Profile Image */
+.n-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #fff; /* White border for contrast */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Search Bar */
+.n-form-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.n-form {
+    position: relative;
+    flex: 1;
+    margin-left: 20px; /* Space from the logo */
+}
+
+#n-search {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    padding: 0 45px;
+    border-radius: 25px;
+    border: 1px solid #ddd; /* Light border */
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #aaa; /* Light gray for icon */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons .nav-icons {
+    font-size: 24px;
+    margin: 0 15px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .nav-icons:hover {
+    transform: scale(1.2);
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Profile Section */
+.n-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.margin {
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.margin:hover {
+    transform: scale(1.1);
+}
+
+/* Notification Badge */
+#notifi {
+    position: relative;
+}
+
+#notifi span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ffde59; /* Bright yellow */
+    color: #333;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .n-logo h1 {
+        font-size: 24px;
+    }
+
+    .n-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #n-search {
+        height: 40px;
+        font-size: 14px;
+        padding: 0 40px;
+    }
+
+    .social-icons {
+        display: none; /* Hide social icons on larger screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 12px 15px;
+    }
+
+    .n-logo h1 {
+        font-size: 22px;
+    }
+
+    .n-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    #n-search {
+        height: 38px;
+        font-size: 14px;
+        padding: 0 30px;
+    }
+
+    .social-icons {
+        position: fixed;
+        bottom: 0;
+        background-color: #ff4b2b; /* Same as nav background */
+        padding: 10px 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .social-icons .nav-icons {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    nav {
+        padding: 8px 10px;
+    }
+
+    .n-logo h1 {
+        font-size: 20px;
+    }
+
+    .n-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #n-search {
+        height: 35px;
+        font-size: 12px;
+        padding: 0 20px;
+    }
+
+    .social-icons {
+        padding: 5px 0;
+        background-color: #ff4b2b; /* Same as nav background */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .social-icons .nav-icons {
+        width: 24px;
+        height: 24px;
+    }
+
+    .search-icon {
+        left: 10px;
+    }
+}

@@ -1,0 +1,194 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Base font-family */
+    color: #333; /* Base text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+}
+
+/* Common Component Styles */
+.Sugg-comp, .following-comp {
+    width: 100%;
+    max-width: 1000px; /* Optional max-width for better control */
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    padding: 15px 25px;
+    overflow: hidden; /* Prevents overflow */
+    transition: box-shadow 0.3s; /* Smooth transition for shadow */
+}
+
+/* Ensure box-shadow does not increase on hover */
+.Sugg-comp:hover, .following-comp:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Keep box-shadow consistent */
+}
+
+.Sugg-comp {
+    min-height: 220px;
+}
+
+.Sugg-comp h2, .following-comp h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.following-comp h2 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: grey;
+}
+
+.s-left, .following-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.s-left img, .following-people img {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.s-left img {
+    width: 50px;
+    height: 50px;
+}
+
+.following-people img {
+    width: 45px;
+    height: 45px;
+}
+
+.sugg-people, .following-people {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows wrapping */
+}
+
+.s-left h3, .following-details h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+.s-left p, .following-details p {
+    font-size: 16px;
+    color: #666;
+}
+
+.s-right {
+    display: flex;
+    gap: 12px;
+}
+
+/* Common Button Styles */
+.s-right button, .following-people button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    text-transform: uppercase;
+    display: inline-flex; /* Ensures consistent sizing */
+    align-items: center;
+    justify-content: center;
+    line-height: 1; /* Prevents text from affecting button size */
+    box-sizing: border-box; /* Includes padding and border in button size */
+    width: 100px; /* Fixed width to prevent resizing */
+    height: 40px; /* Fixed height to prevent resizing */
+    overflow: hidden; /* Ensure no content causes overflow */
+}
+
+/* Button Specific Styles */
+.s-right button.follow, .following-people button.follow-back {
+    background: linear-gradient(107deg, #ff4500 11.1%, #f5a623 95.3%);
+    color: #fff;
+    border: 2px solid transparent; /* Ensure border does not affect size */
+}
+
+.s-right button.follow:hover, .following-people button.following:hover {
+    background-color: #ff6347;
+    border-color: #ff6347; /* Ensure border color changes */
+}
+
+.s-right button.dismiss, .following-people button.requesting {
+    background: transparent;
+    color: #888;
+    border: 2px solid #888;
+}
+
+.s-right button.dismiss:hover, .following-people button.requesting:hover {
+    color: #333;
+    border-color: #333; /* Adjust border color on hover */
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .Sugg-comp {
+        padding: 15px 10px;
+        border-radius: 12px;
+    }
+
+    .Sugg-comp h2, .following-comp h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .s-left img, .following-people img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .s-left h3, .following-details h3 {
+        font-size: 14px;
+    }
+
+    .s-right button, .following-people button {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Sugg-comp {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .s-left img, .following-people img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .s-left h3, .following-details h3 {
+        font-size: 12px;
+    }
+
+    .s-right button, .following-people button {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,74 @@
+.online-comp {
+    width: 100%;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.online-comp h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #444;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.online-people {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.online-people img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.online-people::before {
+    content: "";
+    position: absolute;
+    background-color: #00c853; /* vibrant green */
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 45px; /* adjusted for larger avatars */
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #fff; /* subtle glow effect */
+}
+
+@media screen and (max-width: 1024px) {
+    .online-comp {
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+
+    .online-comp h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .online-people {
+        gap: 15px;
+    }
+
+    .online-people img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .online-people::before {
+        width: 14px;
+        height: 14px;
+        left: 40px; /* adjusted for smaller avatars */
+    }
+}

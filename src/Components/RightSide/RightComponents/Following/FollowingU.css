@@ -1,0 +1,225 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Base font-family */
+    color: #333; /* Base text color */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+}
+
+/* Common Component Styles */
+.Sugg-comp, .following-comp {
+    width: 100%;
+    max-width: 1000px; /* Optional max-width for better control */
+    padding: 20px 30px; /* Increased padding for more space inside */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    margin: 20px auto; /* Spacing around the component */
+    overflow: hidden; /* Prevent overflow */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    transition: box-shadow 0.3s; /* Smooth transition for shadow only */
+}
+
+/* Heading Styles */
+.Sugg-comp h2, .following-comp h2 {
+    font-size: 20px; /* Larger font size for prominence */
+    margin-bottom: 25px; /* Space below the heading */
+    color: #333; /* Darker color for readability */
+    font-weight: 400; /* Bolder heading */
+    text-transform: uppercase; /* Consistent uppercase */
+}
+
+/* Flex Container Styles */
+.s-left, .following-details {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adequate spacing between elements */
+    margin-bottom: 15px; /* Space between entries */
+}
+
+.s-left img, .following-people img {
+    width: 60px; /* Larger image size for better visibility */
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Text Styles */
+.s-left h3, .following-details h3 {
+    font-size: 18px; /* Increased font size */
+    font-weight: 600;
+    color: #222; /* Darker text color */
+}
+
+.s-left p, .following-details p {
+    font-size: 16px; /* Larger font size */
+    color: #555; /* Slightly darker grey */
+}
+
+/* Button Styles */
+.s-right, .following-people {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 12px; /* Adequate space between buttons */
+}
+
+.s-right button, .following-people button {
+    padding: 10px 16px; /* Adjusted padding for substantial buttons */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 14px; /* Consistent button font size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    position: relative; /* Positioning for hover effects */
+}
+
+/* Button Specific Styles */
+.s-right button.follow, .following-people button.follow-back {
+    background: linear-gradient(107deg, #ff4500 11.1%, #f5a623 95.3%);
+    color: #fff;
+}
+
+.s-right button.follow:hover, .following-people button.following:hover {
+    background-color: transparent;
+    border: 2px solid #ff6347;
+    /* Ensure no size increase on hover */
+}
+
+.s-right button.dismiss, .following-people button.requesting {
+    background: transparent;
+    color: grey;
+    border: 2px solid grey;
+}
+
+.s-right button.dismiss:hover, .following-people button:hover {
+    text-decoration: none;
+}
+
+/* Hover Effect for Container */
+.Sugg-comp:hover, .following-comp:hover {
+    /* No transform here to prevent size change */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* SM-btn Styles */
+.SM-btn {
+    padding: 6px 12px; /* Compact padding for a smaller button */
+    border: none;
+    border-radius: 25px;
+    font-size: 11px; /* Smaller font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100px; /* Fixed width */
+    height: 35px; /* Fixed height */
+}
+
+/* Primary Button */
+.SM-btn.primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.SM-btn.primary:hover {
+    background-color: #0056b3;
+}
+
+/* Secondary Button */
+.SM-btn.secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.SM-btn.secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Danger Button */
+.SM-btn.danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.SM-btn.danger:hover {
+    background-color: #c82333;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .Sugg-comp, .following-comp {
+        padding: 15px 20px; /* Adjusted padding */
+        border-radius: 12px;
+    }
+
+    .Sugg-comp h2, .following-comp h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .s-left img, .following-people img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .s-left h3, .following-details h3 {
+        font-size: 16px;
+    }
+
+    .s-left p, .following-details p {
+        font-size: 14px;
+    }
+
+    .s-right button, .following-people button {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Sugg-comp, .following-comp {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .s-left img, .following-people img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .s-left h3, .following-details h3 {
+        font-size: 14px;
+    }
+
+    .s-left p, .following-details p {
+        font-size: 12px;
+    }
+
+    .s-right button, .following-people button {
+        font-size: 11px;
+        padding: 6px 12px; /* Smaller padding for small buttons */
+    }
+}

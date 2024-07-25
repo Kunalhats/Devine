@@ -1,0 +1,133 @@
+/* Ensure the parent container of .R-Side has position: relative */
+.parent-container {
+    position: relative; /* This helps with sticky positioning */
+}
+
+/* .R-Side styling */
+.R-Side {
+    height: calc(90vh - 128px); /* Adjust height as needed */
+    border-radius: 20px;
+    margin: 20px 0;
+    padding: 20px; /* Padding for spacing */
+    position: sticky; /* Sticky positioning */
+    top: 153px; /* Distance from the top of the viewport */
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #c2c2c2 #f0f0f0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10; /* Ensures it stays on top */
+}
+
+.R-Side::-webkit-scrollbar {
+    width: 10px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.R-Side::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.R-Side::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 10px;
+}
+
+.R-Side::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.R-Side:hover::-webkit-scrollbar {
+    opacity: 0.7;
+}
+
+.R-Side.closeBurger {
+    font-size: 32px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.R-Side.closeBurger:hover {
+    color: #555;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px) {
+    .R-Side {
+        height: calc(100vh - 88px);
+        border-radius: 15px;
+        top: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .R-Side {
+        background-color: #f9f9f9;
+    }
+
+    .R-Side.active {
+        width: 70%;
+        height: 100%;
+        position: sticky;
+        top: 0;
+        transform: translateX(0);
+        border-radius: 0;
+        transition: .3s;
+        overflow-y: auto;
+    }
+
+    .R-Side.unActive {
+        width: 100%;
+        height: 100%;
+        position: sticky;
+        top: 0;
+        transform: translateX(100%);
+        border-radius: 0;
+        transition: .3s;
+    }
+
+    .R-Side.closeBurger {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .R-Side {
+        background-color: #f9f9f9;
+    }
+
+    .R-Side.active {
+        width: 100%;
+        height: 100%;
+        position: sticky;
+        top: 0;
+        transform: translateX(0);
+        border-radius: 0;
+        transition: .4s;
+        overflow-y: auto;
+    }
+
+    .R-Side.unActive {
+        width: 100%;
+        height: 100%;
+        position: sticky;
+        top: 0;
+        transform: translateX(100%);
+        border-radius: 0;
+        transition: .4s;
+    }
+
+    .R-Side.closeBurger {
+        font-size: 36px;
+        top: 25px;
+        right: 25px;
+    }
+}

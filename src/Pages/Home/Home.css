@@ -1,0 +1,157 @@
+/* Interface Container */
+.interface {
+    width: 100%;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+}
+
+/* Home Container */
+.home {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.2fr;
+    column-gap: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+    .home {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .home {
+        padding: 10px;
+    }
+}
+
+/* Profile Middle Container */
+.profileMiddle {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+    background: #fff; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+}
+
+.profileMiddle::-webkit-scrollbar {
+    width: 8px;
+    
+}
+
+.profileMiddle::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.profileMiddle::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.profileMiddle::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 430px) {
+    .profileMiddle {
+        margin-bottom: 48px;
+        height: auto; /* Adjust height based on content */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profileMiddle {
+        margin-bottom: 62px;
+        height: auto; /* Adjust height based on content */
+    }
+}
+
+/* Post Container */
+.post {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Post Image Container */
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd; /* Added border for separation */
+}
+
+/* Post Content */
+.post-content {
+    padding: 20px; /* Increased padding for more spacious feel */
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.post-title {
+    font-size: 1.6rem; /* Adjusted for better readability */
+    font-weight: 700;
+    margin-bottom: 12px; /* Increased space below title */
+    color: #333; /* Dark color for better readability */
+}
+
+.post-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Slightly lighter color for text */
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* Increased padding for better spacing */
+    border-top: 1px solid #ddd;
+    background: #fff;
+}
+
+.post-actions button {
+    background: transparent;
+    border: none;
+    font-size: 1rem; /* Adjusted for consistency */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.post-actions button:hover {
+    color: #007bff; /* Changed hover color to a more vibrant blue */
+}
+
+.post-actions .likes,
+.post-actions .comments {
+    font-size: 0.9rem; /* Slightly smaller for better balance */
+    color: #666;
+}
+
+.post-actions .likes {
+    color: #e74c3c; /* Red color for likes */
+}

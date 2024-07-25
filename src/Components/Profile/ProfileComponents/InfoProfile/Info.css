@@ -1,0 +1,254 @@
+/* Main Container */
+.info {
+    width: 90%;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Cover Section */
+.info-cover {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.info-cover img:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+/* Cover and Profile Picture Edit Icons */
+.coverDiv, .profileDiv {
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.coverDiv {
+    top: 20px;
+    right: 20px;
+}
+.profileDiv {
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.coverSvg, .profileSvg {
+    font-size: 20px;
+}
+
+/* Profile Picture */
+.info-cover img:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: center;
+    padding: 3px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 3px solid #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Follow and Logout Buttons */
+.info-follow {
+    text-align: center;
+    padding: 10px 20px 0;
+}
+.info-follow h1 {
+    margin-top: 60px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.info-follow p {
+    color: grey;
+    font-size: 14px;
+}
+.info-follow button, .logout {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+.info-follow button {
+    background-color: #dedede;
+    position: absolute;
+    top: 210px;
+    right: 20px;
+}
+.info-follow button:hover {
+    background: linear-gradient(107deg, rgb(255, 67, 5) 11.1%, rgb(245, 135, 0) 95.3%);
+    color: #ffffff;
+}
+.logout {
+    background: linear-gradient(107deg, rgb(255, 67, 5) 11.1%, rgb(245, 135, 0) 95.3%);
+    color: #ffffff;
+    position: absolute;
+    top: 210px;
+    left: 20px;
+}
+
+/* Info Details */
+.info-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.info-details-list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.info-details-list span {
+    color: grey;
+    font-size: 14px;
+}
+.info-col-1 {
+    flex: 1;
+}
+.info-col-2 {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+.info-col-2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 2px;
+}
+.info-col-2 div h2 {
+    font-weight: 600;
+    font-size: 18px;
+}
+.info-col-2 div span {
+    font-size: 14px;
+    color: grey;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .info {
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+    .info-cover img:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info {
+        margin: 5px auto;
+        border-radius: 10px;
+    }
+    .info-cover img:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .info {
+        margin: 5px 0;
+        border-radius: 0;
+        min-height: 100px;
+    }
+    .info-cover {
+        height: 140px;
+    }
+    .info-cover img:nth-child(1) {
+        border-radius: 0;
+    }
+    .info-cover img:nth-child(2) {
+        width: 100px;
+        height: 100px;
+        top: 100px;
+    }
+    .info-cover svg {
+        top: 15px;
+        right: 15px;
+        font-size: 18px;
+    }
+    .info-follow h1 {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+    .info-follow p {
+        font-size: 12px;
+    }
+    .info-follow button, .logout {
+        top: 150px;
+        font-size: 12px;
+    }
+    .logout {
+        left: 10px;
+    }
+    .info-details {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .info-col-1 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    .info-details-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-details-list span {
+        font-size: 12px;
+    }
+    .info-col-2 {
+        width: 80%;
+        background-color: #eeecec;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+    .info-col-2 div h2 {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .info-col-2 div span {
+        font-size: 12px;
+    }
+    .profileDiv, .coverDiv {
+        width: 25px;
+        height: 25px;
+        top: 130px;
+    }
+    .profileDiv svg, .coverDiv svg {
+        font-size: 14px;
+    }
+}

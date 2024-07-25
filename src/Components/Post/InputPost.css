@@ -1,0 +1,172 @@
+.i-form {
+    width: 90%;
+    max-width: 600px; /* Fixed maximum width */
+    min-height: 300px; /* Fixed minimum height */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f9f9f9; /* Light gray background for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-sizing: border-box; /* Include padding and border in the width and height */
+}
+
+.i-input-box {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.i-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    border: 3px solid #ddd; /* Light border around the image */
+}
+
+#i-input {
+    width: calc(100% - 80px); /* Adjust width to account for image */
+    height: 120px;
+    padding: 0 15px 0 70px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.file-upload .file-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.file-upload button {
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(107deg, #ff4305 11.1%, #f58700 95.3%);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+.file-upload button:hover {
+    background: linear-gradient(107deg, #e43a02 11.1%, #e57600 95.3%);
+}
+
+.photo-icon {
+    color: #ff4305; /* Consistent with button gradient */
+}
+
+.pv-upload {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.photo-dis {
+    font-weight: 500;
+    padding: 0 4px;
+}
+
+.displayImg {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure image fits within the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.displayImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.displayImg svg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .i-form {
+        width: 95%;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    #i-input {
+        height: 100px;
+        font-size: 14px;
+    }
+    .file-upload button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .displayImg {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .file-upload .file-icons {
+        gap: 15px;
+    }
+    .i-form {
+        padding: 10px;
+        min-height: 250px;
+    }
+    .displayImg {
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .i-form {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        min-height: 200px;
+    }
+    #i-input {
+        height: 80px;
+        font-size: 12px;
+        padding: 0 10px 0 50px;
+    }
+    .file-upload button {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+    .photo-dis {
+        display: none;
+    }
+    .displayImg {
+        height: 140px;
+    }
+}
