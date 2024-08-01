@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Replace with your repository name if it's different
+const base = '/Devine/';
+
 export default defineConfig({
   plugins: [react()],
-})
+  base: base,
+});
