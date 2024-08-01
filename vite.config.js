@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Replace with your repository name if it's different 
-
 export default defineConfig({
   plugins: [react()],
-  base: '/Devine/',
+  base: '/Devine/', // Replace '<repository>' with your GitHub repository name
+  build: {
+    chunkSizeWarningLimit: 1000 // Set the limit to 1000 kB or higher
+  }
 });
