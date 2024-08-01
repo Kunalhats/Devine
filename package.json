@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Kunalhats.github.io/Devine",
+  "homepage": "https://Kunalhats.github.io/devine",
 
   "scripts": {
     "dev": "vite",
